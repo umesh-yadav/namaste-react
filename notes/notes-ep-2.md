@@ -1,5 +1,5 @@
-#Episode 2
-#Ignite our App 
+# Episode 2
+# Ignite our App 
 
 NPM basically does not stand for Node Package manager, but on the backend it works as a package manager for our application.
 
@@ -36,10 +36,10 @@ to build production ready buily we use below command, but need to remove main : 
 npx parcel build index.html
 
 
-#browserslist - the package which is used to make your app Compatible with older browser versions.
+# browserslist - the package which is used to make your app Compatible with older browser versions.
 
 
-1. What is a bundler?
+# 1. What is a bundler?
 A bundler is a development tool that combines many JavaScript code files into a single one that is production-ready loadable in the browser
 
 For example:
@@ -47,10 +47,11 @@ For example:
 parcel
 webpack (used by create-react-app) and
 vite ( prounounced as veet)
-2. Parcel:
-Parcel is a bundler used for development and productions purposes.
 
-Parcel Features:
+# 2. Parcel:
+ Parcel is a bundler used for development and productions purposes.
+
+# Parcel Features:
 HMR - Hot Module Replacement - parcel keeps track of file changes via file watcher algorithm and renders the changes in the files
 File watcher algorithm - made with C++
 MINIFY
@@ -71,13 +72,13 @@ Install:
 npm install -D parcel
 -D is used for development and as a development dependency.
 
-Parcel Commands :
+# Parcel Commands :
 For development build:
 npx parcel <entry_point> 
 For production build :
 npx parcel build <entry_point> 
-3. Why react is fast?
+# 3. Why react is fast?
 It is not only the virtual DOM that makes React faster but other components like bundlers (e.g. parcel, webpack ,vite etc. ) and development ecosystme also.
 
-4. Transitive dependencies:
+# 4. Transitive dependencies:
 It is a type of dependency where one dependency requires another dependency to work properly and another dependency requires an another dependecy.
