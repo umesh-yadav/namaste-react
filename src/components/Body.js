@@ -8,13 +8,39 @@ const Body = () =>{
 
     //Local State variable - super powerful variable
     const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+    const [searchInput, setSearchInput] = useState("");
     
 
     return (
         <div className="body">
             <div className="search-container">
-                <input type="text" id="searchbar" placeholder="type your favourite restaurant" />
-                <button id="searchbtn">Search</button>
+                <input type="text" id="searchbar" placeholder="type your favourite restaurant" 
+            
+                onChange={(e)=> {
+                    setSearchInput(e.target.value);
+                   // console.log(searchInput.length);
+                    if(searchInput.length>1){
+                            const filteredData = listOfRestaurants.filter(
+                                (res)=> res?.data?.name.toLowerCase().includes(searchInput.toLowerCase())
+                            );
+                            console.log(filteredData);
+                    setListOfRestaurants(filteredData);
+                     }else{
+                        setListOfRestaurants(resList);
+                    }
+
+                }}
+                value={searchInput}
+                />
+                <button id="searchbtn" onClick={()=>{
+                    const filteredData = listOfRestaurants.filter(
+                        (res)=> res?.data?.name.toLowerCase().includes(searchInput.toLowerCase())
+                    );
+                    setListOfRestaurants(filteredData);
+                    if(searchInput===""){
+                        setListOfRestaurants(resList);
+                    }
+                }}>Search</button>
             </div>
             <div className="filter">
                 <button className="filterbtn" onClick={ ()=>{

@@ -80,7 +80,7 @@ const Header4 = ()=> {
     return (
         <div className="header">
             <div className="left">
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" c/>
             </div>
             <div className="middle">
                 <input type="text" placeholder="search" className="input"/>
